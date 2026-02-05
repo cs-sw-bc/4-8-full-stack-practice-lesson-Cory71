@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Destinations</title>
+</head>
+<body>
+  <h1>Destinations</h1>
+  <a href="/destinations/new">Add New Destination</a>
+  <ul>
+    <% destinations.forEach(d => { %>
+      <li>
+        <a href="/destinations/<%= d._id %>"><%= d.name %></a> (<%= d.country %>)
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
